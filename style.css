@@ -1,0 +1,303 @@
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --gray: #2a2b2c;
+    --light-gray:#777777;
+    --theme:#37afd4;
+
+}
+
+html{
+    overflow-x: hidden;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    background: var(--secondary);
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1.2rem;
+    
+}
+
+/*--------------------------color input ---------------------------- */
+
+/* input[type=text],[type=email],[type=tel],[type=textarea]{
+    background-color: #FFFAF0;
+}
+
+input[type=text],[type=email],[type=tel],[type=textarea]:focus {
+  background-color: #FFFAF0;
+
+} */
+
+
+/*-------------------------------------------------------------------- Navbar Styles ---------------------*/
+.navbar {
+    background: rgba(0, 0, 0, 0);
+    padding: 20px 0px;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 10px 0px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand {
+    color: rgba(0, 0, 0, 0.9) !important;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--secondary) !important;
+    transition: all 0.3s ease;
+    margin: 0px 2px;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    background: var(--secondary);
+    transition: all 1s ease;
+}
+
+/* -----------------------------------------------------------------   Hero Section ----------------------------*/
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./photos/sohel.jpg') top right/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/*------------------------------------------------------------------------ Gallery Section------------------------------------------ */
+
+.gallery-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: all 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+/*------------------------------------------------------------------------- About Section ----------------------------------------------- */
+
+
+
+.about-img {
+    position: relative;
+    margin-right: 2rem;
+}
+
+.about-img::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--primary);
+    z-index: -1;
+
+}
+
+
+.hire{
+  transition: all 2s ease;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ff3021;
+  background-image: radial-gradient(rgb(252, 171, 20), #ff3021);
+  color: var(--primary);
+  border: none;
+  outline: none;
+  box-shadow: 0 1em 3em -1.25em rgba(0,0,0,0.3);
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  margin: 3em 0;
+  overflow: hidden;
+
+} 
+
+.hire:hover{
+    background-image: radial-gradient(rgb(0, 183, 255), rgb(0, 119, 255));
+    transition: all 2s ease;
+}
+
+.shine{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: skew(30deg) translateX(-120%);
+  background-color: rgba(255,255,255,0.3);
+  animation: shine 2s ease infinite;
+ 
+}
+
+@keyframes shine{
+  0%
+  {transform: skew(30deg) translateX(-120%)}
+
+  30%{
+    transform: skew(30deg) translateX(120%)
+  }
+  100%{
+    transform: skew(30deg) translateX(120%)
+  } 
+    
+}    
+
+/* -----------------------------------------------------------------------------Auto-typing -------------------------------------------*/
+
+
+.typing{
+    height: 130vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.4)), url('./photos/silhouette.jpg') center /cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--theme);
+}
+
+.typing h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    mix-blend-mode: difference;
+}
+
+
+
+/*--------------------------------------------------------------------------- Contact Section -------------------------------------------*/
+
+.contact {
+    background: var(--primary);
+    color: var(--secondary);
+    height: 100%;
+    padding-top: 5rem;
+
+}
+
+
+.contact-info p{
+    font-size: 1.4rem;
+}
+
+.contact-info i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ----------------------------------------------------------------------------work-together --------------------------------------------*/
+
+
+#work_together{
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+}
+
+#work_together h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+
+}
+
+#work_together a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.work_together_form p{
+    font-size: 1.7rem;
+}
+
+
+
+
+/*------------------------------------------------------------------------------ social-links -------------------------------------------*/
+
+.text-center a .fab {
+    padding: 15px 20px;
+    font-size: 2.2rem;
+    width: 100px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 8px;
+    color: var(--secondary);
+  
+}
+
+.text-center a .fab:hover {
+     color: var(--theme);
+
+    }
+
+
+/*------------------------------------------------------------------------------------ Footer ----------------------------------------------- */
+footer {
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 20px 0;
+}
+
+footer .container p{
+    color: var(--light-gray);
+    
+}
+   
+footer div p span{
+     color: var(--secondary);
+}
+
+/*------------------------------------------------------------------------------------Animations -------------------------------------------*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: fadeInUp 1s ease;
+
+}
